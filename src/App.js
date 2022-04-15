@@ -1,6 +1,19 @@
+import { PropTypes } from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
 
+function Title({ name, children }) {
+  return (
+    <div>
+      {name}
+      {children}
+    </div>
+  );
+}
+Title.propTypes = {
+  name: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
+};
 function App() {
   return (
     <div className="App">
@@ -15,7 +28,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          <Title name="Learn React">
+            <div>312452353425345</div>
+          </Title>
         </a>
       </header>
     </div>
